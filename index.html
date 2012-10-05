@@ -5,6 +5,22 @@
     <title>Decision maker</title>
   </head>
   <body>
-    <!-- page content -->
+    <h1>Decision maker app</h1>
+    <form id="decisionForm" method="post" action="">
+      <fieldset>
+        <label for="numusers">How many choices do you have?</label>
+        <input type="number" name="numChoices" value="0">
+        <input type="submit" name="makeDecision" value="Decide!">
+      </fieldset>
+    </form>
+    <div id="decision"></div>
+    <script>
+      var decisionFormEl = document.getElementById('decisionForm');
+      
+      decisionFormEl.addEventListener('submit', function(){
+        var decisionEl = document.getElementById('decision');
+      });
+
+    </script>
   </body>
 </html>
