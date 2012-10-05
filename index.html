@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <form id="decisionForm" method="post" action="">
       <fieldset>
         <label for="numusers">How many choices do you have?</label>
-        <input type="number" name="numChoices" value="0">
+        <input type="number" id="availableChoices" name="numChoices" value="0">
         <input type="submit" name="makeDecision" value="Decide!">
       </fieldset>
     </form>
@@ -17,10 +17,16 @@
     <script>
       var decisionFormEl = document.getElementById('decisionForm');
       
-      decisionFormEl.addEventListener('submit', function(){
-        var decisionEl = document.getElementById('decision');
-      });
+      decisionFormEl.addEventListener('submit', function(event){
+        event.preventDefault();
 
+        var decisionEl = document.getElementById('decision'),
+            numChoices = document.getElementById('availableChoices').value,
+            choice = Math.floor((Math.random() * numChoices) + 1);
+
+        decisionEl.innerHTML = "We think you should pick number: " + choice;
+      });
+     
     </script>
   </body>
 </html>
