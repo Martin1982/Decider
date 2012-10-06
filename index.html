@@ -10,11 +10,37 @@
         font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica;
       }
 
+      h1 {
+        display: block;
+        background: blue;
+        border: 2px solid #333;
+        padding: 4px;
+        font-size: 1.2em;
+        color: #fff; 
+      }
+
+      fieldset {
+        margin: 5px;
+        padding: 0;
+        border: 2px solid #dedede;
+      }
+
+      #decision {
+         margin: 5px;
+	 background-color: green;
+	 border: 2px solid #333;
+         border-radius: 3px;
+         display: none;
+         color: #fff;
+      }
+
       input[type="submit"] {
+        min-width: 100px;
+        min-height: 100px;
         border: 1px solid #333;
         border-radius: 3px;
 	font-weight: bold;
-	background-color: #DDD;
+	background-color: red;
       }
     </style>
   </head>
@@ -39,6 +65,7 @@
             choice = Math.floor((Math.random() * numChoices) + 1);
 
         decisionEl.innerHTML = "We think you should pick number: " + choice;
+	decisionEl.style.display = "block";
       });
      
     </script>
