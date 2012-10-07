@@ -1,0 +1,15 @@
+body {
+ margin: 0px 5px;
+}
+h1 img {
+  margin: 0 10px 0 0;
+}
+#decision {
+  display: none;
+}
+.lead-image {
+  max-height: 50px;
+}
+input[type="number"] {
+  width: 100px;
+}
