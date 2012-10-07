@@ -2,19 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
     <title>Decision maker</title>
     <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap-responsive.min.css" rel="stylesheet">
     <style>
+      body {
+         margin: 0px 5px;
+      }
+      h1 img {
+        margin: 0 10px 0 0;
+      }
       #decision {
          display: none;
+      }
+      .lead-image {
+        max-height: 50px;
+      }
+      input[type="number"] {
+        width: 100px;
       }
     </style>
   </head>
   <body>
-    <h1>Decider</h1>
-    <h4>Choosing randomly</h4>
-    <form id="decisionForm" method="post" action="" class="well well-small form-inline">
+    <h1><img src="questionmark.png" class="lead-image">Decider</h1>
+    <form id="decisionForm" method="post" action="" class="well well-small">
       <fieldset>
         <label for="numusers">How many choices do you have?</label>
         <input type="number" id="availableChoices" name="numChoices" value="0">
@@ -22,6 +37,9 @@
       </fieldset>
     </form>
     <div id="decision" class="alert alert-info"></div>
+    <div>
+       <p>Created by: <a href="http://www.martindekeijzer.nl">Martin de Keijzer</a></p>
+    </div>
     <script src="decider.js"></script>
   </body>
 </html>
